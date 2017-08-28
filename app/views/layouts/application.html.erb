@@ -3,12 +3,28 @@
   <head>
     <title>Testrapp</title>
     <%= csrf_meta_tags %>
-
+    <%= stylesheet_link_tag 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' %>
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
   </head>
 
   <body>
+
+    <nav class="navbar navbar-default">
+          <a class="navbar-brand" href="#">Nes and Meek</a>
+
+          <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <ul class="navbar-nav ">
+              <li><%= link_to "home", home_path %></li>
+            </ul>
+            <ul class="navbar-nav navbar-right">
+              <li><%= link_to "Create Post", new_post_path %></li>
+            </ul>
+          </div>
+        </nav>
+
+    <div class='container'>
     <%= yield %>
+    </div>
   </body>
 </html>
