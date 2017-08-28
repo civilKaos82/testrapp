@@ -9,6 +9,12 @@
             :class => 'btn btn-danger' %>
 <hr />
 
+<% @post.comments.each do |comment| %>
+  <div class='well'>
+    <p><strong><%= comment.name%></strong>: <%= comment.body %></p>
+  </div>
+<% end %>
+
 <h3>Add Comment</h3>
 <%= form_for([@post, @post.comments.build])  do |f| %>
 
