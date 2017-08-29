@@ -16,7 +16,6 @@ def destroy
 end
 
 
-
 private
 
   def comment_params
